@@ -18,7 +18,7 @@ class CreateAnswersTable extends Migration
             $table->id();
             $table->foreignIdFor(Question::class)
                 ->constrained()
-                ->restrictOnDelete()
+                ->cascadeOnDelete()
                 ->cascadeOnUpdate();
             $table->mediumText('text');
             $table->boolean('is_correct');

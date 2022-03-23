@@ -17,8 +17,8 @@ class CreateQuizQuestionsTable extends Migration
     {
         Schema::create('quiz_questions', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Quiz::class)->constrained();
-            $table->foreignIdFor(Question::class)->constrained();
+            $table->foreignIdFor(Quiz::class)->constrained()->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreignIdFor(Question::class)->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->boolean('is_correct')->nullable();
             $table->timestamps();
         });
