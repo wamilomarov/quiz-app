@@ -19386,30 +19386,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   components: {
     AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"]
-  },
-  mounted: function mounted() {
-    console.log(this.leaders);
-  },
-  data: function data() {
-    return {
-      items: [{
-        age: 40,
-        first_name: 'Dickerson',
-        last_name: 'Macdonald'
-      }, {
-        age: 21,
-        first_name: 'Larsen',
-        last_name: 'Shaw'
-      }, {
-        age: 89,
-        first_name: 'Geneva',
-        last_name: 'Wilson'
-      }, {
-        age: 38,
-        first_name: 'Jami',
-        last_name: 'Carney'
-      }]
-    };
   }
 });
 
@@ -19777,8 +19753,6 @@ var _hoisted_1 = /*#__PURE__*/_withScopeId(function () {
 });
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _component_b_pagination = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("b-pagination");
-
   var _component_AppLayout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("AppLayout");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_AppLayout, null, {
@@ -19795,16 +19769,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         )]);
       }), 256
       /* UNKEYED_FRAGMENT */
-      ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_b_pagination, {
-        modelValue: $props.leaders.meta.current_page,
-        "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-          return $props.leaders.meta.current_page = $event;
-        }),
-        "total-rows": $props.leaders.meta.total,
-        "per-page": $props.leaders.meta.per_page
-      }, null, 8
-      /* PROPS */
-      , ["modelValue", "total-rows", "per-page"])];
+      ))])];
     }),
     _: 1
     /* STABLE */
