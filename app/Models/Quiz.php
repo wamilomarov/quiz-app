@@ -69,6 +69,11 @@ class Quiz extends Model
         return $this->hasMany(QuizQuestion::class);
     }
 
+    public function unansweredQuestions(): HasMany
+    {
+        return $this->quizQuestions()->whereNull('is_correct');
+    }
+
     public function setQuestions()
     {
         $questions = Question::query()
