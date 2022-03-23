@@ -70,8 +70,7 @@ class QuizController extends Controller
         $leaders = Quiz::query()
             ->orderByDesc('total_score')
             ->orderByDesc('duration')
-            ->paginate();
-//        dd($leaders);
+            ->get();
 
         return inertia("Leaders", [
             'leaders' => LeaderResource::collection($leaders)

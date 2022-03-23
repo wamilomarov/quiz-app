@@ -14,12 +14,6 @@
                 <td>{{leader.duration}}</td>
             </tr>
         </table>
-
-    <b-pagination
-        v-model="leaders.meta.current_page"
-        :total-rows="leaders.meta.total"
-        :per-page="leaders.meta.per_page"
-    ></b-pagination>
     </AppLayout>
 </template>
 
@@ -31,19 +25,6 @@ export default {
         leaders: Object
     },
     components: {AppLayout},
-    mounted() {
-        console.log(this.leaders)
-    },
-    data() {
-        return {
-            items: [
-                { age: 40, first_name: 'Dickerson', last_name: 'Macdonald' },
-                { age: 21, first_name: 'Larsen', last_name: 'Shaw' },
-                { age: 89, first_name: 'Geneva', last_name: 'Wilson' },
-                { age: 38, first_name: 'Jami', last_name: 'Carney' }
-            ]
-        }
-    }
 }
 </script>
 
