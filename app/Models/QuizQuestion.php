@@ -36,7 +36,7 @@ class QuizQuestion extends Model
         return $this->belongsTo(Question::class);
     }
 
-    public function checkAnswer(int $answerId)
+    public function checkAnswer(int $answerId): bool
     {
         $answer = $this->question
             ->answers
@@ -47,5 +47,6 @@ class QuizQuestion extends Model
         $this->update([
             'is_correct' => !is_null($answer)
         ]);
+        return !is_null($answer);
     }
 }

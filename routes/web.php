@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::post('quizzes', [QuizController::class, 'store'])->name('quizzes.store');
 Route::get('quizzes/{quiz:uuid}', [QuizController::class, 'show'])->name('quizzes.show');
 Route::post('quizzes/{quiz:uuid}', [QuizController::class, 'submit'])->name('quizzes.submit');
+
+Route::get('leaders', [QuizController::class, 'leaders'])->name('leaders.index');

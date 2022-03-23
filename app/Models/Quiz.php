@@ -16,7 +16,9 @@ use Illuminate\Support\Str;
  * @property string $first_name
  * @property string $last_name
  * @property string $email
+ * @property int $total_score
  * @property Carbon $submitted_at
+ * @property ?string $duration
  *
  * @property Carbon $created_at
  * @property Carbon $updated_at
@@ -40,7 +42,9 @@ class Quiz extends Model
         'first_name',
         'last_name',
         'email',
-        'submitted_at'
+        'total_score',
+        'submitted_at',
+        'duration',
     ];
 
     protected $dates = [

@@ -122,7 +122,7 @@ export default {
 
                 const now = moment();
                 const end = moment(this.quiz.data.created_at).add(5, 'm');
-                const distance = Math.abs(end.diff(now, 'ms', true));
+                const distance = end.diff(now, 'ms', true);
 
                 if (distance <= 0) {
                     clearInterval(timer);

@@ -20,7 +20,9 @@ class CreateQuizzesTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
+            $table->integer('total_score')->nullable();
             $table->timestamp('submitted_at')->nullable();
+            $table->time('duration')->nullable();
             $table->timestamps();
         });
     }
